@@ -1,5 +1,4 @@
 //Program Bakery 5.0
-import java.util.ArrayList;
 import java.util.*;
 public class Cake {
 	private String name;
@@ -19,15 +18,6 @@ public class Cake {
 		type = t;
 		price = p;
 		flavour = f;}
-//	public void addIngredient (Ingredient ingredient)
-//	{
-//		ing[count++] = ingredient;
-//	}
-//	public void getIngredient() {
-//		for(int i=0; i<count; i++) {
-//		ing[i].display();
-//	}
-//}
 	public void setName(String name){ name=name;}
 	public void setSize(double size){this.size = size;}
 	public void setType(String type){this.type = type;}

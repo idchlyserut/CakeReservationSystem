@@ -47,10 +47,10 @@ public abstract class Person {
 		return address;
 	}
 
-	public String toString()
-	{
-		return ("\nName: " + getName()+ "  Phone: " + getContact() + "  Address: " + getAddress());
-	}
+	public abstract String toString(); //abstract method declare
+
+		//return ("\nName: " + getName()+ "  Phone: " + getContact() + "  Address: " + getAddress());
+
 
 }
 

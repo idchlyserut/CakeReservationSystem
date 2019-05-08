@@ -15,6 +15,11 @@ public class Customer extends Person{
 	}
 
 	public void display(){
-		System.out.println("\n .*.*.*.*.*Customer Information.*.*.*.*.* \nCustomerID :" + getCustomerID() + super.toString());
-}
+		System.out.println("\n .*.*.*.*.*Customer Information.*.*.*.*.* \nCustomerID :" + getCustomerID());
+	}
+
+	public String toString() //abstract method override
+	{
+		return ("\nName: " + getName()+ "  Phone: " + getContact() + "  Address: " + getAddress());
+	}
 }

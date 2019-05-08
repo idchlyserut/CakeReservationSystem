@@ -7,7 +7,8 @@ public class Cake {
 	private String type;
 	private String flavour;
 	private double price;
-	//private Ingredient[] ing;
+
+
 	public int count;
 
 	public Cake(){
@@ -19,15 +20,8 @@ public class Cake {
 		type = t;
 		price = p;
 		flavour = f;}
-//	public void addIngredient (Ingredient ingredient)
-//	{
-//		ing[count++] = ingredient;
-//	}
-//	public void getIngredient() {
-//		for(int i=0; i<count; i++) {
-//		ing[i].display();
-//	}
-//}
+
+
 	public void setName(String name){ name=name;}
 	public void setSize(double size){this.size = size;}
 	public void setType(String type){this.type = type;}
@@ -40,8 +34,8 @@ public class Cake {
 	public double getPrice(){return price;}
 	public String getFlavour(){return flavour;}
 
-	public void display(){
-		System.out.println("\n.*.*.*.*.*Cake information.*.*.*.*.*\nCake Type: " + getType() + "\nCake Size (KG): " + getSize()+ "\nCake Flavour: " + getFlavour()+ "\nPrice: RM" + getPrice());
+	public String display(){
+		return ("\n\tCake Name: " + getName()+ "\n\tCake Type: " + getType() + "\n\tCake Size (KG): " + getSize()+ "\n\tCake Flavour: " + getFlavour()+ "\n\tPrice: RM" + getPrice());
 
 	}
 }

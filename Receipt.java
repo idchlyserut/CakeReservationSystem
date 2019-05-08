@@ -1,22 +1,22 @@
 //Program Bakery 8.0
 import java.util.Date;
 
-public class Receipt extends ReservationInfo{
-	private Customer c;
+public class Receipt {
+	private Customer c; //agg
 	private double totalPrice;
-	private  String pickupDate;
+	private String pickupDate;
+	private ReservationInfo ri;
 	private Cake cake; //aggregation
-	public int id;
+	//public int id;
 
 
 	public Receipt(String p, double total) {
 		pickupDate = p;
-		totalPrice = total;}
-
-	public int getReserveID() {
-
-		return id=100;
+		totalPrice = total;
+		//ri = reserveInfo;
 	}
+
+
 
 	public void setPickupDate(String pickupDate ){
 			this.pickupDate = pickupDate;
@@ -25,6 +25,10 @@ public class Receipt extends ReservationInfo{
 
 		public String getPickupDate(){
 			return pickupDate;
+		}
+
+		public void calcTotal() {
+			totalPrice = cake.getPrice();
 		}
 
 		public double getTotalPrice(){
@@ -36,10 +40,11 @@ public class Receipt extends ReservationInfo{
 		System.out.println("      Successfully booked a cake!    \n ");
 		System.out.println("              Bakery               \n");
 		System.out.print("----------------CustomerInfo--------------\n");
-		System.out.print("\nReserveID: " + getReserveID());
-		System.out.print("\nDate Order Created: " + getDateCreated());
-		System.out.print("\nTotalPrice: " + getTotalPrice());
-		System.out.print("\nPickup Date: " + getPickupDate() + "\n");
+		System.out.println("\nReserveID: " + ri.getReserveID());
+		System.out.println("\nDate Order Created: " + ri.getDateCreated());
+		System.out.println("\nTotalPrice: " + getTotalPrice());
+		System.out.println("\nPickup Date: " + getPickupDate() + "\n");
+
 
 	}
 }
